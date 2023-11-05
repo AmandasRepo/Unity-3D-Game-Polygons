@@ -18,4 +18,9 @@ public class EnemyController : MonoBehaviour
     {
         
     }
+
+    void FixedUpdate()
+    {
+        transform.position += -(transform.position - player.transform.position)*0.01f;
+    }
 }

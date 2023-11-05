@@ -38,9 +38,9 @@ public class PlayerController : MonoBehaviour
             forceDirection += -forceScalar*rigidBody.transform.forward;
 
         if (Input.GetKey(KeyCode.A))
-            forceDirection += forceScalar*rigidBody.transform.right;
-        if (Input.GetKey(KeyCode.D))
             forceDirection += -forceScalar*rigidBody.transform.right;
+        if (Input.GetKey(KeyCode.D))
+            forceDirection += forceScalar*rigidBody.transform.right;
 
         if (Input.GetKey(KeyCode.LeftArrow))//Rotate player
             rotation = -0.05f; //Speed of rotation left
