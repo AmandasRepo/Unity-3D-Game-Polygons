@@ -47,8 +47,8 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow))
             rotation = 0.05f;
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) && rigidBody.transform.position.y <= 0.41f) //Jump button
-            forceDirection += Vector3.up * 2000f;
+        if (Input.GetKeyDown(KeyCode.LeftShift)) //Jump button
+            forceDirection += Vector3.up * 3000f;
 
         rigidBody.AddTorque(new Vector3(0f, rotation, 0f), ForceMode.Impulse);
         rigidBody.AddForce(forceDirection);
